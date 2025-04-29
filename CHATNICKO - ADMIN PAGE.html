@@ -330,6 +330,7 @@ hr {
 </header>
 </div>
 
+<!-- HOME -->
 <div class="home">
 <header>
 <div class="sidebar">
@@ -366,7 +367,7 @@ hr {
 <br>
 
 <body>
-
+<!-- Directive Pages and Sections -->
 <section id="news" class="newslog">
 <div style="background-color: rgba(160, 160, 160, 0.9); padding: 5px; margin: 0; border-radius: 10px;">
   <h2>NEWS & UPDATES</h2>
@@ -478,7 +479,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Dark Mode (Default) */
 .dark-mode {
   background: linear-gradient(to right, black 0%, black 30%, purple 80%, thistle 100%);
   color: white;
@@ -508,7 +508,6 @@ input:checked + .slider:before {
   color: white;
 }
 
-/* Light Mode */
 .light-mode {
   background: linear-gradient(to right, #f7f7f7 0%, #eaeaea 30%, #dcdcdc 80%, #f3f0f5 100%);
   color: black;
@@ -584,11 +583,10 @@ darkModeToggle.addEventListener("change", () => {
   }
 });
 
-// Set Dark Mode by default on page load
 window.onload = function () {
-  showSection("home");  // your original function
-  displayCalendar();    // your original function
-  setTheme("dark");      // default dark
+  showSection("home");  
+  displayCalendar();    
+  setTheme("dark");      
 };
 </script>
 
@@ -636,7 +634,7 @@ window.onload = function () {
 </section>
 
 <script>
-  // Hide all sections and show the clicked one
+  
   function showSection(id) {
     const sections = document.querySelectorAll("section");
     sections.forEach((sec) => {
@@ -648,7 +646,7 @@ window.onload = function () {
     }
   }
 
-  // Add click handlers for sidebar icons
+  
   document.querySelectorAll(".sidebar a").forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -657,7 +655,7 @@ window.onload = function () {
     });
   });
 
-  // Show 'home' by default on load
+ 
   window.onload = function () {
     showSection("home");
   };
@@ -678,12 +676,12 @@ window.onload = function () {
   const accountPopup = document.getElementById("accountPopup");
   const closePopupButton = document.getElementById("closePopup");
 
-  // Show the account info popup when the button is clicked
+  
   accountButton.addEventListener("click", () => {
     accountPopup.style.display = "flex";
   });
 
-  // Close the popup when the close button is clicked
+  
   closePopupButton.addEventListener("click", () => {
     accountPopup.style.display = "none";
   });
@@ -776,7 +774,7 @@ window.onload = function () {
     showNews(currentNewsIndex);
   }
 
-  // Initialize by showing the first news item
+  
   showNews(currentNewsIndex);
 </script>
 
